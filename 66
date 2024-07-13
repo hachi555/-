@@ -1,0 +1,17 @@
+import random
+
+# 创建一个5行5列的矩阵
+matrix = [[random.randint(1, 100) for _ in range(5)] for _ in range(5)]
+
+# 输出矩阵
+print("矩阵:")
+for row in matrix:
+    print(row)
+
+# 计算行和
+row_sums = [sum(row) for row in matrix]
+print("\n行和:", row_sums)
+
+# 计算列和
+col_sums = [sum(matrix[i][j] for i in range(5)) for j in range(5)]
+print("列和:", col_sums)
